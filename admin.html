@@ -25,24 +25,38 @@
         <!-- Admin Header -->
         <header class="admin-header">
             <div class="admin-header-content">
-                <div class="admin-logo">
-                    <div class="logo-circle">AJ</div>
-                    <h2>Admin <span class="highlight">Dashboard</span></h2>
+                <div class="admin-header-left">
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="admin-logo">
+                        <div class="logo-circle">AJ</div>
+                        <h2>Admin <span class="highlight">Dashboard</span></h2>
+                    </div>
                 </div>
                 <div class="admin-header-actions">
                     <a href="blog.html" class="view-site-btn" target="_blank">
-                        <i class="fa-solid fa-external-link-alt"></i> View Site
+                        <i class="fa-solid fa-external-link-alt"></i> <span class="btn-text">View Site</span>
                     </a>
                     <button class="logout-btn" id="logout-btn">
-                        <i class="fa-solid fa-sign-out-alt"></i> Logout
+                        <i class="fa-solid fa-sign-out-alt"></i> <span class="btn-text">Logout</span>
                     </button>
                 </div>
             </div>
         </header>
 
         <div class="admin-main">
+            <!-- Mobile Sidebar Overlay -->
+            <div class="mobile-sidebar-overlay" id="mobile-sidebar-overlay"></div>
+            
             <!-- Sidebar -->
-            <aside class="admin-sidebar">
+            <aside class="admin-sidebar" id="admin-sidebar">
+                <div class="sidebar-header">
+                    <h3>Menu</h3>
+                    <button class="mobile-sidebar-close" id="mobile-sidebar-close" aria-label="Close menu">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                </div>
                 <nav class="admin-nav">
                     <a href="#blogs" class="nav-item active" data-section="blogs">
                         <i class="fa-solid fa-blog"></i>
@@ -89,6 +103,10 @@
                                 <!-- Blogs will be inserted here -->
                             </tbody>
                         </table>
+                        <!-- Mobile Card View -->
+                        <div class="blogs-cards" id="blogs-cards" style="display: none;">
+                            <!-- Blog cards will be inserted here -->
+                        </div>
                     </div>
                 </section>
 
@@ -387,10 +405,13 @@
         function renderBlogsTable() {
             const tbody = document.getElementById('blogs-tbody');
             const table = document.getElementById('blogs-table');
+            const cardsContainer = document.getElementById('blogs-cards');
 
             if (blogs.length === 0) {
                 tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 2rem;">No blog posts found.</td></tr>';
+                cardsContainer.innerHTML = '<div style="text-align: center; padding: 2rem;">No blog posts found.</div>';
             } else {
+                // Desktop table view
                 tbody.innerHTML = blogs.map(blog => `
                     <tr>
                         <td><strong>${blog.title || 'Untitled'}</strong></td>
@@ -420,6 +441,36 @@
                     </tr>
                 `).join('');
 
+                // Mobile card view
+                cardsContainer.innerHTML = blogs.map(blog => `
+                    <div class="blog-card-mobile">
+                        <div class="blog-card-header">
+                            <h3>${blog.title || 'Untitled'}</h3>
+                            <span class="status-badge ${blog.published ? 'published' : 'draft'}">
+                                ${blog.published ? 'Published' : 'Draft'}
+                            </span>
+                        </div>
+                        <div class="blog-card-meta">
+                            <span class="category-badge">${blog.category || 'GENERAL'}</span>
+                            <span class="blog-date">${formatDate(blog.created_at)}</span>
+                        </div>
+                        <div class="blog-card-actions">
+                            <button class="btn-icon edit-btn" data-id="${blog.id}" title="Full Edit">
+                                <i class="fa-solid fa-edit"></i> Edit
+                            </button>
+                            <button class="btn-icon quick-edit-btn" data-id="${blog.id}" title="Quick Edit" style="color: #2196F3;">
+                                <i class="fa-solid fa-pen-to-square"></i> Quick Edit
+                            </button>
+                            <a href="blog-detail.html?id=${blog.id}" class="btn-icon" title="View Post" target="_blank" style="text-decoration: none; color: var(--secondary-text);">
+                                <i class="fa-solid fa-eye"></i> View
+                            </a>
+                            <button class="btn-icon delete-btn" data-id="${blog.id}" title="Delete">
+                                <i class="fa-solid fa-trash"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                `).join('');
+
                 // Add event listeners
                 document.querySelectorAll('.edit-btn').forEach(btn => {
                     btn.addEventListener('click', () => editBlog(btn.getAttribute('data-id')));
@@ -434,8 +485,32 @@
                 });
             }
 
-            table.style.display = 'table';
+            // Show appropriate view based on screen size
+            if (window.innerWidth <= 768) {
+                table.style.display = 'none';
+                cardsContainer.style.display = 'block';
+            } else {
+                table.style.display = 'table';
+                cardsContainer.style.display = 'none';
+            }
         }
+
+        // Handle window resize
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                const table = document.getElementById('blogs-table');
+                const cardsContainer = document.getElementById('blogs-cards');
+                if (window.innerWidth <= 768) {
+                    if (table) table.style.display = 'none';
+                    if (cardsContainer) cardsContainer.style.display = 'block';
+                } else {
+                    if (table) table.style.display = 'table';
+                    if (cardsContainer) cardsContainer.style.display = 'none';
+                }
+            }, 250);
+        });
 
         // Format date
         function formatDate(dateString) {
@@ -942,6 +1017,46 @@
             if (e.target.id === 'quick-edit-modal') {
                 document.getElementById('quick-edit-modal').style.display = 'none';
             }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const adminSidebar = document.getElementById('admin-sidebar');
+        const mobileSidebarOverlay = document.getElementById('mobile-sidebar-overlay');
+        const mobileSidebarClose = document.getElementById('mobile-sidebar-close');
+        const body = document.body;
+
+        function openMobileSidebar() {
+            adminSidebar.classList.add('active');
+            mobileSidebarOverlay.classList.add('active');
+            body.classList.add('sidebar-open');
+        }
+
+        function closeMobileSidebar() {
+            adminSidebar.classList.remove('active');
+            mobileSidebarOverlay.classList.remove('active');
+            body.classList.remove('sidebar-open');
+        }
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', openMobileSidebar);
+        }
+
+        if (mobileSidebarClose) {
+            mobileSidebarClose.addEventListener('click', closeMobileSidebar);
+        }
+
+        if (mobileSidebarOverlay) {
+            mobileSidebarOverlay.addEventListener('click', closeMobileSidebar);
+        }
+
+        // Close sidebar when clicking nav items on mobile
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    closeMobileSidebar();
+                }
+            });
         });
 
         // Load blogs on page load
