@@ -119,14 +119,11 @@ header {
 .logo-circle {
     width: 40px;
     height: 40px;
-    border: 1px solid var(--primary-text);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-serif);
-    font-size: 1.2rem;
-    font-weight: 600;
+    background: url('images/ylogo.png') center/cover no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -9999px; /* hide any fallback text */
 }
 
 nav ul {
