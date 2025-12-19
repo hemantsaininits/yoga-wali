@@ -220,6 +220,30 @@
             </div>
         </div>
 
+        <!-- Features Section -->
+        <section class="features">
+            <div class="feature-item">
+                <div class="icon"><i class="fa-solid fa-spa"></i></div>
+                <h3>YOGA</h3>
+                <p>Mindful movement, breath, and stillness to strengthen the body and calm the mind.</p>
+            </div>
+            <div class="feature-item">
+                <div class="icon"><i class="fa-solid fa-infinity"></i></div>
+                <h3>DANCE</h3>
+                <p>Expressive movement that frees energy, uplifts the spirit, and reconnects you with joy.</p>
+            </div>
+            <div class="feature-item">
+                <div class="icon"><i class="fa-solid fa-om"></i></div>
+                <h3>EFT (TAPPING)</h3>
+                <p>A gentle technique using acupressure points to release stress, shift emotions, and restore balance.</p>
+            </div>
+            <div class="feature-item">
+                <div class="icon"><i class="fa-solid fa-leaf"></i></div>
+                <h3>SOUND HEALING</h3>
+                <p>Vibrational frequencies and soothing tones that support deep relaxation and inner harmony.</p>
+            </div>
+        </section>
+
         <!-- Hero Section -->
         <section class="hero" role="banner">
             <div class="hero-content">
@@ -265,36 +289,20 @@
                         <img src="images/soundf.png" alt="Sound Healing session - Vibrational frequencies for inner harmony">
                     </div>
                 </div>
+                <div class="hero-navigation">
+                    <button class="nav-btn prev-btn" id="prev-slide" aria-label="Previous slide">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="nav-btn next-btn" id="next-slide" aria-label="Next slide">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
                 <div class="hero-indicators">
                     <span class="indicator active" data-slide="0"></span>
                     <span class="indicator" data-slide="1"></span>
                     <span class="indicator" data-slide="2"></span>
                     <span class="indicator" data-slide="3"></span>
                 </div>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="features">
-            <div class="feature-item">
-                <div class="icon"><i class="fa-solid fa-spa"></i></div>
-                <h3>YOGA</h3>
-                <p>Mindful movement, breath, and stillness to strengthen the body and calm the mind.</p>
-            </div>
-            <div class="feature-item">
-                <div class="icon"><i class="fa-solid fa-infinity"></i></div>
-                <h3>DANCE</h3>
-                <p>Expressive movement that frees energy, uplifts the spirit, and reconnects you with joy.</p>
-            </div>
-            <div class="feature-item">
-                <div class="icon"><i class="fa-solid fa-om"></i></div>
-                <h3>EFT (TAPPING)</h3>
-                <p>A gentle technique using acupressure points to release stress, shift emotions, and restore balance.</p>
-            </div>
-            <div class="feature-item">
-                <div class="icon"><i class="fa-solid fa-leaf"></i></div>
-                <h3>SOUND HEALING</h3>
-                <p>Vibrational frequencies and soothing tones that support deep relaxation and inner harmony.</p>
             </div>
         </section>
 
@@ -437,14 +445,15 @@
             }
         });
 
-        // Hero Carousel Auto-Change
+        // Hero Carousel Manual Navigation
         let currentSlide = 0;
         const totalSlides = 4;
-        const slideInterval = 5000; // 5 seconds for better viewing experience
 
         const heroTextSlides = document.querySelectorAll('.hero-slide');
         const heroImageSlides = document.querySelectorAll('.hero-image-slide');
         const indicators = document.querySelectorAll('.indicator');
+        const prevBtn = document.getElementById('prev-slide');
+        const nextBtn = document.getElementById('next-slide');
 
         function showSlide(index) {
             // Remove active class from all slides
@@ -463,39 +472,51 @@
             showSlide(currentSlide);
         }
 
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+
         // Initialize first slide
         showSlide(0);
 
-        // Auto-advance slides
-        let slideTimer = setInterval(nextSlide, slideInterval);
+        // Previous/Next button handlers
+        if (prevBtn) {
+            prevBtn.addEventListener('click', prevSlide);
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', nextSlide);
+        }
 
         // Indicator click handlers
         indicators.forEach((indicator, index) => {
             indicator.addEventListener('click', () => {
                 currentSlide = index;
                 showSlide(currentSlide);
-                // Reset timer
-                clearInterval(slideTimer);
-                slideTimer = setInterval(nextSlide, slideInterval);
             });
         });
 
-        // Pause on hover
-        const heroSection = document.querySelector('.hero');
-        let isPaused = false;
+        // Feature items click handlers to navigate to corresponding slides
+        const featureItems = document.querySelectorAll('.feature-item');
+        // Map: YOGA -> 0, DANCE -> 1, EFT -> 2, SOUND HEALING -> 3
+        const featureSlideMap = {
+            'YOGA': 0,
+            'DANCE': 1,
+            'EFT (TAPPING)': 2,
+            'SOUND HEALING': 3
+        };
 
-        heroSection.addEventListener('mouseenter', () => {
-            if (!isPaused) {
-                clearInterval(slideTimer);
-                isPaused = true;
-            }
-        });
-
-        heroSection.addEventListener('mouseleave', () => {
-            if (isPaused) {
-                slideTimer = setInterval(nextSlide, slideInterval);
-                isPaused = false;
-            }
+        featureItems.forEach((featureItem) => {
+            featureItem.addEventListener('click', () => {
+                const featureTitle = featureItem.querySelector('h3').textContent.trim();
+                const slideIndex = featureSlideMap[featureTitle];
+                
+                if (slideIndex !== undefined) {
+                    currentSlide = slideIndex;
+                    showSlide(currentSlide);
+                }
+            });
         });
 
         // Preloader - Show for 3 seconds
