@@ -459,17 +459,24 @@
         const indicators = document.querySelectorAll('.indicator');
         const prevBtn = document.getElementById('prev-slide');
         const nextBtn = document.getElementById('next-slide');
+        const featureItems = document.querySelectorAll('.feature-item');
 
         function showSlide(index) {
             // Remove active class from all slides
             heroTextSlides.forEach(slide => slide.classList.remove('active'));
             heroImageSlides.forEach(slide => slide.classList.remove('active'));
             indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Remove active class from all feature items
+            featureItems.forEach(item => item.classList.remove('active'));
 
             // Add active class to current slide (synchronized)
             heroTextSlides[index].classList.add('active');
             heroImageSlides[index].classList.add('active');
             indicators[index].classList.add('active');
+            
+            // Add active class to corresponding feature item
+            featureItems[index].classList.add('active');
         }
 
         function nextSlide() {
@@ -503,7 +510,6 @@
         });
 
         // Feature items click handlers to navigate to corresponding slides
-        const featureItems = document.querySelectorAll('.feature-item');
         // Map: YOGA -> 0, DANCE -> 1, EFT -> 2, SOUND HEALING -> 3
         const featureSlideMap = {
             'YOGA': 0,
@@ -512,7 +518,7 @@
             'SOUND HEALING': 3
         };
 
-        featureItems.forEach((featureItem) => {
+        featureItems.forEach((featureItem, index) => {
             featureItem.addEventListener('click', () => {
                 const featureTitle = featureItem.querySelector('h3').textContent.trim();
                 const slideIndex = featureSlideMap[featureTitle];
