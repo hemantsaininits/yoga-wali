@@ -47,7 +47,7 @@ body.preloader-active {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: pulse 2s ease-in-out infinite;
+    /* animation: pulse 2s ease-in-out infinite; */
 }
 
 .preloader-logo {
@@ -70,14 +70,14 @@ body.preloader-active {
     }
 }
 
-@keyframes pulse {
+/* @keyframes pulse {
     0%, 100% {
         transform: scale(1);
     }
     50% {
         transform: scale(1.05);
     }
-}
+} */
 
 @media (max-width: 768px) {
     .preloader-logo {
@@ -117,10 +117,10 @@ header {
 }
 
 .logo-circle {
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    background: url('images/ylogo.png') center/cover no-repeat;
+    background: url('images/teal-logo.png') center/cover no-repeat;
     display: inline-block;
     overflow: hidden;
     text-indent: -9999px; /* hide any fallback text */
@@ -176,7 +176,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
     position: relative;
 }
 
@@ -194,20 +194,22 @@ nav a:hover {
     color: var(--primary-text);
     margin-bottom: 20px;
     letter-spacing: -1px;
+    text-align: center;
 }
 
 .hero h1 .highlight {
     display: block;
-    margin-left: 40px;
+    text-align: center;
     /* Indent the second line */
 }
 
 .subtitle {
-    font-size: 0.7rem;
+    font-size: 1rem;
     letter-spacing: 2px;
     color: var(--secondary-text);
     margin-left: 5px;
-    text-transform: uppercase;
+    text-align: center;
+    /* text-transform: uppercase; */
 }
 
 .hero-image {
@@ -220,6 +222,7 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .hero-image-slider {
@@ -255,7 +258,7 @@ nav a:hover {
 
 .hero-slide {
     position: absolute;
-    top: 0;
+    top: 100px;
     left: 0;
     width: 100%;
     opacity: 0;
@@ -270,10 +273,11 @@ nav a:hover {
 }
 
 .category-text {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     color: var(--secondary-text);
     margin-top: 15px;
     font-style: italic;
+    text-align: center;
     font-family: var(--font-serif);
 }
 
@@ -309,9 +313,9 @@ nav a:hover {
 /* Hero Navigation Buttons */
 .hero-navigation {
     position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: -70px;
+    left: 69.3%;
+    /* transform: translateX(-50%); */
     display: flex;
     gap: 20px;
     z-index: 10;
@@ -331,9 +335,9 @@ nav a:hover {
     font-size: 1rem;
     transition: all 0.3s ease;
     /* Neumorphic shadow effect */
-    box-shadow: 
+    /* box-shadow: 
         8px 8px 16px rgba(0, 0, 0, 0.1),
-        -8px -8px 16px rgba(255, 255, 255, 0.9);
+        -8px -8px 16px rgba(255, 255, 255, 0.9); */
 }
 
 .nav-btn:hover {
@@ -402,7 +406,7 @@ nav a:hover {
 }
 
 .feature-item h3 {
-    font-size: 0.7rem;
+    font-size: 1rem;
     letter-spacing: 1px;
     margin-bottom: 10px;
     font-weight: 600;
@@ -415,7 +419,7 @@ nav a:hover {
 }
 
 .feature-item p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--secondary-text);
     line-height: 1.6;
     max-width: 200px;
@@ -899,6 +903,9 @@ footer {
         padding: 20px 0;
         margin-bottom: 40px;
     }
+    .hero-slide{
+        top: 0;
+    }
 
     /* Show menu icon on mobile */
     .menu-icon {
@@ -1116,7 +1123,9 @@ footer {
     }
 
     .hero-navigation {
-        bottom: 60px;
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
         gap: 15px;
     }
 
