@@ -279,6 +279,46 @@
         if (categoryItems.length > 0) {
             categoryItems[0].classList.add('active');
         }
+
+        // Auto-filter based on URL parameter
+        function autoFilterFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const filter = urlParams.get('filter');
+            
+            if (filter) {
+                // Find the category item that matches the filter
+                categoryItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (category === filter) {
+                        // Remove active class from all categories
+                        categoryItems.forEach(cat => cat.classList.remove('active'));
+                        // Add active class to matching category
+                        item.classList.add('active');
+                        
+                        // Trigger the filter
+                        const categoryAttr = item.getAttribute('data-category');
+                        bentoItems.forEach(bentoItem => {
+                            if (categoryAttr === 'all' || bentoItem.getAttribute('data-category') === categoryAttr) {
+                                bentoItem.style.display = 'block';
+                                setTimeout(() => {
+                                    bentoItem.style.opacity = '1';
+                                    bentoItem.style.transform = 'scale(1)';
+                                }, 10);
+                            } else {
+                                bentoItem.style.opacity = '0';
+                                bentoItem.style.transform = 'scale(0.8)';
+                                setTimeout(() => {
+                                    bentoItem.style.display = 'none';
+                                }, 300);
+                            }
+                        });
+                    }
+                });
+            }
+        }
+
+        // Run auto-filter on page load
+        autoFilterFromURL();
     </script>
 
 </body>

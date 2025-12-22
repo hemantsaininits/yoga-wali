@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Testimonials - Ashika Jain Yoga Studio | Client Reviews & Success Stories</title>
+    <meta name="title" content="Testimonials - Ashika Jain Yoga Studio | Client Reviews & Success Stories">
+    <meta name="description" content="Read inspiring testimonials from our yoga students. Discover how Ashika Jain's holistic approach to yoga, dance therapy, EFT, and sound healing has transformed lives.">
+    <meta name="keywords" content="yoga testimonials, yoga reviews, client testimonials, yoga success stories, yoga student reviews, Ashika Jain reviews, wellness testimonials">
+    <meta name="author" content="Ashika Jain">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.ashikajain.com/testimonial.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ashikajain.com/testimonial.html">
+    <meta property="og:title" content="Testimonials - Ashika Jain Yoga Studio">
+    <meta property="og:description" content="Read inspiring testimonials from our yoga students. Discover how our holistic approach has transformed lives.">
+    <meta property="og:image" content="https://www.ashikajain.com/images/ylogo.png">
+    <meta property="og:site_name" content="Ashika Jain Yoga Studio">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.ashikajain.com/testimonial.html">
+    <meta name="twitter:title" content="Testimonials - Ashika Jain Yoga Studio">
+    <meta name="twitter:description" content="Read inspiring testimonials from our yoga students.">
+    <meta name="twitter:image" content="https://www.ashikajain.com/images/ylogo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/teal-logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Testimonial Page Specific Styles */
+        .testimonial-hero {
+            text-align: center;
+            padding: 60px 50px;
+            margin-bottom: 80px;
+        }
+
+        .testimonial-hero h1 {
+            font-family: var(--font-serif);
+            font-size: 4.5rem;
+            font-weight: 400;
+            color: var(--primary-text);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            line-height: 1.1;
+        }
+
+        .testimonial-hero h1 .highlight {
+            display: block;
+        }
+
+        .testimonial-hero .subtitle {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            color: var(--secondary-text);
+            font-style: italic;
+            font-family: var(--font-serif);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 100px;
+            padding: 0 50px;
+        }
+
+        .testimonial-card {
+            background: #f0f9f9;
+            padding: 40px 30px;
+            border-radius: 8px;
+            border: 1px solid #e0f2f1;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(26, 95, 95, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        .testimonial-rating {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+            color: #ffc107;
+        }
+
+        .testimonial-rating i {
+            font-size: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            color: var(--secondary-text);
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-style: italic;
+            flex-grow: 1;
+            font-family: var(--font-serif);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-top: 20px;
+            border-top: 1px solid #e0f2f1;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-text);
+            font-weight: 600;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .testimonial-author-info h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-text);
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .testimonial-author-info p {
+            font-size: 0.8rem;
+            color: var(--secondary-text);
+        }
+
+        .testimonial-quote-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            opacity: 0.3;
+        }
+
+        .testimonial-stats {
+            background: #f0f9f9;
+            padding: 60px 50px;
+            margin-bottom: 80px;
+            border-top: 1px solid #e0f2f1;
+            border-bottom: 1px solid #e0f2f1;
+        }
+
+        .testimonial-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .testimonial-stat-item {
+            padding: 20px;
+        }
+
+        .testimonial-stat-number {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--primary-text);
+            margin-bottom: 10px;
+        }
+
+        .testimonial-stat-label {
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .testimonial-cta {
+            text-align: center;
+            padding: 0 50px;
+            margin-bottom: 100px;
+        }
+
+        .testimonial-cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .testimonial-cta h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--primary-text);
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .testimonial-cta p {
+            font-size: 1rem;
+            color: var(--secondary-text);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-cta-btn {
+            display: inline-block;
+            padding: 14px 40px;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: var(--primary-text);
+            color: #fff;
+            border-radius: 25px 0% 25px 0%;
+            transition: all 0.3s ease;
+            font-family: var(--font-sans);
+        }
+
+        .testimonial-cta-btn:hover {
+            background-color: transparent;
+            color: var(--primary-text);
+            border: 1px solid var(--primary-text);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                padding: 0 30px;
+            }
+
+            .testimonial-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .testimonial-hero {
+                padding: 40px 30px;
+            }
+
+            .testimonial-hero h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonial-hero {
+                padding: 40px 20px;
+                margin-bottom: 60px;
+            }
+
+            .testimonial-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                padding: 0 20px;
+                margin-bottom: 60px;
+            }
+
+            .testimonial-card {
+                padding: 30px 25px;
+            }
+
+            .testimonial-stats {
+                padding: 40px 20px;
+                margin-bottom: 60px;
+            }
+
+            .testimonial-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .testimonial-stat-number {
+                font-size: 2.5rem;
+            }
+
+            .testimonial-cta {
+                padding: 0 20px;
+                margin-bottom: 60px;
+            }
+
+            .testimonial-cta h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonial-hero h1 {
+                font-size: 2rem;
+            }
+
+            .testimonial-stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-cta h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <!-- Header -->
+        <header role="banner">
+            <div class="logo">
+                <div class="logo-circle">AJ</div>
+            </div>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="classes.html">CLASSES</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="testimonial.html" class="active">TESTIMONIALS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html#contact-form" class="book-btn">BOOK CLASS</a>
+                <div class="menu-icon" id="mobile-menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <div class="logo-circle">AJ</div>
+                    <button class="mobile-menu-close" id="mobile-menu-close">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                </div>
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="index.html" class="mobile-nav-link">HOME</a></li>
+                        <li><a href="classes.html" class="mobile-nav-link">CLASSES</a></li>
+                        <li><a href="gallery.html" class="mobile-nav-link">GALLERY</a></li>
+                        <li><a href="testimonial.html" class="mobile-nav-link">TESTIMONIALS</a></li>
+                        <li><a href="about.html" class="mobile-nav-link">ABOUT</a></li>
+                        <li><a href="contact.html" class="mobile-nav-link">CONTACT US</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-footer">
+                    <a href="contact.html#contact-form" class="mobile-book-btn">BOOK CLASS</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial Hero Section -->
+        <section class="testimonial-hero">
+            <h1>WHAT OUR<br><span class="highlight">STUDENTS SAY</span></h1>
+            <p class="subtitle">Real stories from our community</p>
+        </section>
+
+        <!-- Testimonials Grid -->
+        <section class="testimonials-section">
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Ashika's Ashtanga classes have completely transformed my practice. Her attention to alignment and gentle guidance has helped me build strength I never knew I had. The studio feels like a sanctuary, and I leave every class feeling renewed and centered."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SM</div>
+                        <div class="testimonial-author-info">
+                            <h4>Sarah Mitchell</h4>
+                            <p>Yoga Student, 2 years</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The dance therapy sessions have been life-changing. I came in feeling disconnected from my body, and through expressive movement, I've rediscovered joy and freedom. Ashika creates such a safe, welcoming space for exploration and healing."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RJ</div>
+                        <div class="testimonial-author-info">
+                            <h4>Rachel Johnson</h4>
+                            <p>Dance Therapy Participant</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"EFT tapping with Ashika has helped me release years of accumulated stress and anxiety. The technique is gentle yet powerful, and I've noticed significant improvements in my emotional well-being. I'm so grateful for this healing modality."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MC</div>
+                        <div class="testimonial-author-info">
+                            <h4>Michael Chen</h4>
+                            <p>EFT Client, 6 months</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Sound healing sessions are pure magic. The vibrational frequencies take me to such a deep state of relaxation and inner peace. I've never experienced anything like it. It's become an essential part of my self-care routine."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">EP</div>
+                        <div class="testimonial-author-info">
+                            <h4>Emily Patel</h4>
+                            <p>Sound Healing Regular</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"As a beginner, I was nervous about starting yoga, but Ashika's welcoming approach made me feel comfortable from day one. Her holistic teaching style combines physical practice with mindfulness, and I've grown so much in just a few months."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">DT</div>
+                        <div class="testimonial-author-info">
+                            <h4>David Thompson</h4>
+                            <p>Beginner Student, 4 months</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+                    <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The combination of yoga, dance, and sound healing has created a complete wellness experience for me. Ashika's expertise in multiple modalities means I can address different aspects of my well-being all in one place. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">LW</div>
+                        <div class="testimonial-author-info">
+                            <h4>Lisa Williams</h4>
+                            <p>Multi-Modality Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Stats Section -->
+        <section class="testimonial-stats">
+            <div class="testimonial-stats-grid">
+                <div class="testimonial-stat-item">
+                    <div class="testimonial-stat-number">4.9</div>
+                    <div class="testimonial-stat-label">Average Rating</div>
+                </div>
+                <div class="testimonial-stat-item">
+                    <div class="testimonial-stat-number">500+</div>
+                    <div class="testimonial-stat-label">Happy Students</div>
+                </div>
+                <div class="testimonial-stat-item">
+                    <div class="testimonial-stat-number">1000+</div>
+                    <div class="testimonial-stat-label">Classes Taught</div>
+                </div>
+                <div class="testimonial-stat-item">
+                    <div class="testimonial-stat-number">98%</div>
+                    <div class="testimonial-stat-label">Would Recommend</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="testimonial-cta">
+            <div class="testimonial-cta-content">
+                <h2>JOIN OUR COMMUNITY</h2>
+                <p>Experience the transformative power of holistic wellness. Whether you're drawn to yoga, dance therapy, EFT, or sound healing, we're here to support your journey toward balance, strength, and inner peace.</p>
+                <a href="contact.html#contact-form" class="testimonial-cta-btn">START YOUR JOURNEY</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="about-footer" role="contentinfo">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-circle">AJ</div>
+                    <p>Ashika Jain Yoga Studio</p>
+                </div>
+                <div class="footer-section">
+                    <h4>CONTACT</h4>
+                    <p>123 Wellness Street<br>Your City, ST 12345<br>contact@ashikajain.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>HOURS</h4>
+                    <p>Monday - Friday: 6am - 9pm<br>Saturday - Sunday: 8am - 6pm</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const body = document.body;
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.add('active');
+                body.classList.add('menu-open');
+            });
+        }
+
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                body.classList.remove('menu-open');
+            });
+        }
+
+        // Close menu when clicking on overlay (outside menu content)
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target === mobileMenu) {
+                    mobileMenu.classList.remove('active');
+                    body.classList.remove('menu-open');
+                }
+            });
+        }
+
+        // Close menu when clicking on a nav link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                body.classList.remove('menu-open');
+            });
+        });
+
+        // Set active state for current page
+        const currentPath = window.location.pathname;
+        const currentPage = currentPath.split('/').pop() || 'index.html';
+        mobileNavLinks.forEach(link => {
+            const linkHref = link.getAttribute('href');
+            if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
+
