@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Gallery | Ashika Jain Yoga Studio</title>
+    <meta name="title" content="Gallery | Ashika Jain Yoga Studio">
+    <meta name="description" content="Explore our gallery showcasing moments from Ashtanga Yoga, Dance Therapy, EFT Tapping, and Sound Healing sessions.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/teal-logo.png">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <!-- Header -->
+        <header role="banner">
+            <div class="logo">
+                <div class="logo-circle">AJ</div>
+            </div>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="classes.html">CLASSES</a></li>
+                    <li><a href="gallery.html" class="active">GALLERY</a></li>
+                    <li><a href="testimonial.html">TESTIMONIALS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html#contact-form" class="book-btn">BOOK CLASS</a>
+                <div class="menu-icon" id="mobile-menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <div class="logo-circle">AJ</div>
+                    <button class="mobile-menu-close" id="mobile-menu-close">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                </div>
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="index.html" class="mobile-nav-link">HOME</a></li>
+                        <li><a href="classes.html" class="mobile-nav-link">CLASSES</a></li>
+                        <li><a href="gallery.html" class="mobile-nav-link active">GALLERY</a></li>
+                        <li><a href="testimonial.html" class="mobile-nav-link">TESTIMONIAL</a></li>
+                        <li><a href="about.html" class="mobile-nav-link">ABOUT</a></li>
+                        <li><a href="contact.html" class="mobile-nav-link">CONTACT US</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-footer">
+                    <a href="contact.html#contact-form" class="mobile-book-btn">BOOK CLASS</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Menu Section -->
+        <section class="gallery-categories">
+            <div class="category-item" data-category="all">
+                <div class="icon"><i class="fa-solid fa-th"></i></div>
+                <h3>ALL</h3>
+            </div>
+            <div class="category-item" data-category="yoga">
+                <div class="icon"><i class="fa-solid fa-spa"></i></div>
+                <h3>YOGA</h3>
+            </div>
+            <div class="category-item" data-category="dance">
+                <div class="icon"><i class="fa-solid fa-infinity"></i></div>
+                <h3>DANCE</h3>
+            </div>
+            <div class="category-item" data-category="eft">
+                <div class="icon"><i class="fa-solid fa-om"></i></div>
+                <h3>EFT (TAPPING)</h3>
+            </div>
+            <div class="category-item" data-category="sound">
+                <div class="icon"><i class="fa-solid fa-leaf"></i></div>
+                <h3>SOUND HEALING</h3>
+            </div>
+        </section>
+
+        <!-- Gallery Heading Section -->
+        <section class="gallery-intro">
+            <div class="gallery-intro-content">
+                <h2 class="gallery-intro-heading">OUR GALLERY</h2>
+                <p class="gallery-intro-text">Explore moments of tranquility, strength, and connection captured in our practice space.</p>
+            </div>
+        </section>
+
+        <!-- Bento Grid Gallery -->
+        <section class="bento-gallery">
+            <!-- Large items span 2 columns, small items span 1 -->
+            <div class="bento-item" data-category="yoga" data-size="large">
+                <img src="images/yogaf.png" alt="Ashtanga Yoga practice session">
+                <div class="bento-overlay">
+                    <span>YOGA</span>
+                </div>
+            </div>
+            <div class="bento-item" data-category="dance" data-size="medium">
+                <img src="images/dancef.png" alt="Dance Therapy session">
+                <div class="bento-overlay">
+                    <span>DANCE</span>
+                </div>
+            </div>
+            <div class="bento-item" data-category="eft" data-size="medium">
+                <img src="images/eftf.png" alt="EFT Tapping therapy">
+                <div class="bento-overlay">
+                    <span>EFT</span>
+                </div>
+            </div>
+            <div class="bento-item" data-category="sound" data-size="large">
+                <img src="images/soundf.png" alt="Sound Healing session">
+                <div class="bento-overlay">
+                    <span>SOUND</span>
+                </div>
+            </div>
+            <div class="bento-item" data-category="yoga" data-size="small">
+                <img src="images/yogaf.png" alt="Yoga pose - strength and flexibility">
+                <div class="bento-overlay">
+                    <span>STRENGTH</span>
+                </div>
+            </div>
+            <div class="bento-item" data-category="dance" data-size="small">
+                <img src="images/dancef.png" alt="Dance movement - expressive therapy">
+                <div class="bento-overlay">
+                    <span>MOVEMENT</span>
+                </div>
+            </div>
+            <div class="bento-item" data-category="yoga" data-size="medium">
+                <img src="images/yogaf.png" alt="Yoga meditation - inner peace">
+                <div class="bento-overlay">
+                    <span>PEACE</span>
+                </div>
+            </div>
+            <div class="bento-item" data-category="eft" data-size="small">
+                <img src="images/eftf.png" alt="EFT tapping - emotional balance">
+                <div class="bento-overlay">
+                    <span>BALANCE</span>
+                </div>
+            </div>
+            <div class="bento-item" data-category="sound" data-size="medium">
+                <img src="images/soundf.png" alt="Sound healing - vibrational therapy">
+                <div class="bento-overlay">
+                    <span>HEALING</span>
+                </div>
+            </div>
+            <div class="bento-item" data-category="yoga" data-size="small">
+                <img src="images/yogaf.png" alt="Yoga flow - mindful practice">
+                <div class="bento-overlay">
+                    <span>FLOW</span>
+                </div>
+            </div>
+            <div class="bento-item" data-category="dance" data-size="large">
+                <img src="images/dancef.png" alt="Dance therapy - joy and expression">
+                <div class="bento-overlay">
+                    <span>JOY</span>
+                </div>
+            </div>
+            <div class="bento-item" data-category="sound" data-size="small">
+                <img src="images/soundf.png" alt="Sound healing - relaxation">
+                <div class="bento-overlay">
+                    <span>RELAX</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="about-footer" role="contentinfo">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-circle">AJ</div>
+                    <p>Ashika Jain Yoga Studio</p>
+                </div>
+                <div class="footer-section">
+                    <h4>CONTACT</h4>
+                    <p>123 Wellness Street<br>Your City, ST 12345<br>contact@ashikajain.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>HOURS</h4>
+                    <p>Monday - Friday: 6am - 9pm<br>Saturday - Sunday: 8am - 6pm</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const body = document.body;
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.add('active');
+                body.classList.add('menu-open');
+            });
+        }
+
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                body.classList.remove('menu-open');
+            });
+        }
+
+        // Close menu when clicking on overlay
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target === mobileMenu) {
+                    mobileMenu.classList.remove('active');
+                    body.classList.remove('menu-open');
+                }
+            });
+        }
+
+        // Close menu when clicking on a nav link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                body.classList.remove('menu-open');
+            });
+        });
+
+        // Gallery Category Filtering
+        const categoryItems = document.querySelectorAll('.category-item');
+        const bentoItems = document.querySelectorAll('.bento-item');
+
+        categoryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active class from all categories
+                categoryItems.forEach(cat => cat.classList.remove('active'));
+                // Add active class to clicked category
+                item.classList.add('active');
+
+                const category = item.getAttribute('data-category');
+
+                // Filter gallery items
+                bentoItems.forEach(bentoItem => {
+                    if (category === 'all' || bentoItem.getAttribute('data-category') === category) {
+                        bentoItem.style.display = 'block';
+                        setTimeout(() => {
+                            bentoItem.style.opacity = '1';
+                            bentoItem.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        bentoItem.style.opacity = '0';
+                        bentoItem.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            bentoItem.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Set "ALL" as active by default
+        if (categoryItems.length > 0) {
+            categoryItems[0].classList.add('active');
+        }
+
+        // Auto-filter based on URL parameter
+        function autoFilterFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const filter = urlParams.get('filter');
+            
+            if (filter) {
+                // Find the category item that matches the filter
+                categoryItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (category === filter) {
+                        // Remove active class from all categories
+                        categoryItems.forEach(cat => cat.classList.remove('active'));
+                        // Add active class to matching category
+                        item.classList.add('active');
+                        
+                        // Trigger the filter
+                        const categoryAttr = item.getAttribute('data-category');
+                        bentoItems.forEach(bentoItem => {
+                            if (categoryAttr === 'all' || bentoItem.getAttribute('data-category') === categoryAttr) {
+                                bentoItem.style.display = 'block';
+                                setTimeout(() => {
+                                    bentoItem.style.opacity = '1';
+                                    bentoItem.style.transform = 'scale(1)';
+                                }, 10);
+                            } else {
+                                bentoItem.style.opacity = '0';
+                                bentoItem.style.transform = 'scale(0.8)';
+                                setTimeout(() => {
+                                    bentoItem.style.display = 'none';
+                                }, 300);
+                            }
+                        });
+                    }
+                });
+            }
+        }
+
+        // Run auto-filter on page load
+        autoFilterFromURL();
+    </script>
+
+</body>
+
+</html>
+
