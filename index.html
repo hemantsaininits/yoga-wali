@@ -437,66 +437,57 @@
             }
         });
 
-        // Hero Carousel Auto-Change
-        let currentSlide = 0;
-        const totalSlides = 4;
-        const slideInterval = 5000; // 5 seconds for better viewing experience
-
+        // Hero Carousel Auto-Change (simple, consistent loop)
+        const slideInterval = 4000; // 4 seconds per slide
         const heroTextSlides = document.querySelectorAll('.hero-slide');
         const heroImageSlides = document.querySelectorAll('.hero-image-slide');
         const indicators = document.querySelectorAll('.indicator');
+        const totalSlides = Math.min(heroTextSlides.length, heroImageSlides.length, indicators.length);
 
-        function showSlide(index) {
-            // Remove active class from all slides
-            heroTextSlides.forEach(slide => slide.classList.remove('active'));
-            heroImageSlides.forEach(slide => slide.classList.remove('active'));
-            indicators.forEach(indicator => indicator.classList.remove('active'));
+        if (totalSlides > 0) {
+            let currentSlide = 0;
+            let slideTimer = null;
 
-            // Add active class to current slide (synchronized)
-            heroTextSlides[index].classList.add('active');
-            heroImageSlides[index].classList.add('active');
-            indicators[index].classList.add('active');
-        }
+            const showSlide = (index) => {
+                heroTextSlides.forEach(slide => slide.classList.remove('active'));
+                heroImageSlides.forEach(slide => slide.classList.remove('active'));
+                indicators.forEach(indicator => indicator.classList.remove('active'));
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
-        }
+                heroTextSlides[index].classList.add('active');
+                heroImageSlides[index].classList.add('active');
+                indicators[index].classList.add('active');
+            };
 
-        // Initialize first slide
-        showSlide(0);
-
-        // Auto-advance slides
-        let slideTimer = setInterval(nextSlide, slideInterval);
-
-        // Indicator click handlers
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                currentSlide = index;
+            const nextSlide = () => {
+                currentSlide = (currentSlide + 1) % totalSlides;
                 showSlide(currentSlide);
-                // Reset timer
+            };
+
+            const restartTimer = () => {
                 clearInterval(slideTimer);
                 slideTimer = setInterval(nextSlide, slideInterval);
+            };
+
+            // Start carousel
+            showSlide(0);
+            restartTimer();
+
+            // Indicator click handlers
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                    restartTimer();
+                });
             });
-        });
 
-        // Pause on hover
-        const heroSection = document.querySelector('.hero');
-        let isPaused = false;
-
-        heroSection.addEventListener('mouseenter', () => {
-            if (!isPaused) {
-                clearInterval(slideTimer);
-                isPaused = true;
+            // Pause on hover
+            const heroSection = document.querySelector('.hero');
+            if (heroSection) {
+                heroSection.addEventListener('mouseenter', () => clearInterval(slideTimer));
+                heroSection.addEventListener('mouseleave', restartTimer);
             }
-        });
-
-        heroSection.addEventListener('mouseleave', () => {
-            if (isPaused) {
-                slideTimer = setInterval(nextSlide, slideInterval);
-                isPaused = false;
-            }
-        });
+        }
 
         // Preloader - Show for 3 seconds
         const preloader = document.getElementById('preloader');
