@@ -1,0 +1,150 @@
+/* Yoga Page Specific Styles */
+
+/* Hero Section Override/Addition */
+.yoga-hero {
+    background: linear-gradient(rgba(26, 95, 95, 0.3), rgba(26, 95, 95, 0.3)), url('../images/yogaf.png') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 80px;
+    border-radius: 25px 25px 50px 50px;
+    position: relative;
+}
+
+.yoga-hero h1 {
+    font-family: var(--font-serif);
+    font-size: 5rem;
+    color: #fff;
+    letter-spacing: 5px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* About Yoga Section */
+.about-yoga {
+    max-width: 800px;
+    margin: 0 auto 100px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.about-yoga h2 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: var(--primary-text);
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.about-yoga p {
+    font-size: 1.1rem;
+    color: var(--secondary-text);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Types of Yoga Section */
+.yoga-types-section {
+    padding: 0 50px;
+    margin-bottom: 120px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: var(--primary-text);
+    margin-bottom: 60px;
+    font-weight: 400;
+}
+
+.yoga-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.type-card {
+    background: #f0f9f9;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0f2f1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.type-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(26, 95, 95, 0.1);
+    border-color: var(--accent-color);
+}
+
+.type-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--primary-text);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.type-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.type-card p {
+    color: var(--secondary-text);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 0;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    opacity: 0.6;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    height: 1px;
+    background-color: var(--accent-color);
+    width: 100px;
+    margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .yoga-hero h1 {
+        font-size: 3rem;
+    }
+
+    .about-yoga h2,
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .yoga-types-grid {
+        grid-template-columns: 1fr;
+    }
+}
