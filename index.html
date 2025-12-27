@@ -547,21 +547,34 @@
         });
 
         // Preloader - Show for 3 seconds
+         window.addEventListener('load', () => {
         const preloader = document.getElementById('preloader');
-        
-        // Add preloader-active class to body on page load
+        const body = document.body;
+
+        // If preloader already shown in this session, skip it
+        if (sessionStorage.getItem('preloaderShown')) {
+            if (preloader) preloader.style.display = 'none';
+            body.classList.remove('preloader-active');
+            return;
+        }
+
+        // First visit → show preloader
         body.classList.add('preloader-active');
-        
-        // Hide preloader after 3 seconds
+
         setTimeout(() => {
             if (preloader) {
                 preloader.style.opacity = '0';
-                body.classList.remove('preloader-active');
+
                 setTimeout(() => {
                     preloader.style.display = 'none';
+                    body.classList.remove('preloader-active');
+
+                    // Mark preloader as shown
+                    sessionStorage.setItem('preloaderShown', 'true');
                 }, 500);
             }
-        }, 2000);
+        }, 1800); // smooth, premium timing
+    });
     </script>
 
 </body>

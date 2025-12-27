@@ -148,3 +148,12 @@
         grid-template-columns: 1fr;
     }
 }
+
+.instructor-img {
+    /* height: 500px; */
+    transition: transform 1s ease;
+}
+
+.instructor-image-wrapper:hover .instructor-img {
+    transform: scale(1.03);
+}
