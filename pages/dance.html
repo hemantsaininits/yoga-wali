@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Primary Meta Tags -->
-    <title>Dance Therapy & Choreography | Ashika Jain Yoga Studio</title>
+    <title>Dance | Ashika Jain Yoga Studio</title>
     <meta name="description"
-        content="Discover our dance services including Wedding Choreography, Classical & Fusion Training, and Dance Therapy. Express yourself through movement.">
+        content="Wedding choreography, group performances, corporate dance, classical & fusion training, and workshops. Express yourself through movement.">
 
-    <!-- Fonts & Styles -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Main Styles -->
     <link rel="stylesheet" href="../style.css">
-    <!-- Page Specific Styles -->
     <link rel="stylesheet" href="dance.css">
 </head>
 
@@ -29,28 +29,31 @@
     <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="preloader-content">
-            <img src="../images/teal-logo.png" alt="Ashika Jain Yoga Studio Logo" class="preloader-logo">
+            <img src="../images/teal-logo.png" class="preloader-logo" alt="Logo">
         </div>
     </div>
 
     <div class="main-container">
+
         <!-- Header -->
-        <header role="banner">
+        <header>
             <div class="logo">
                 <a href="../index.html">
                     <div class="logo-circle">AJ</div>
                 </a>
             </div>
-            <nav role="navigation" aria-label="Main navigation">
+
+            <nav>
                 <ul>
                     <li><a href="../index.html">HOME</a></li>
                     <li><a href="../classes.html">CLASSES</a></li>
                     <li><a href="../gallery.html">GALLERY</a></li>
                     <li><a href="../testimonial.html">TESTIMONIALS</a></li>
                     <li><a href="../about.html">ABOUT</a></li>
-                    <li><a href="../contact.html">CONTACT US</a></li>
+                    <li><a href="../contact.html">CONTACT</a></li>
                 </ul>
             </nav>
+
             <div class="header-actions">
                 <a href="../contact.html#contact-form" class="book-btn">BOOK CLASS</a>
                 <div class="menu-icon" id="mobile-menu-toggle">
@@ -59,7 +62,7 @@
             </div>
         </header>
 
-        <!-- Mobile Menu Overlay -->
+        <!-- Mobile Menu -->
         <div class="mobile-menu-overlay" id="mobile-menu">
             <div class="mobile-menu-content">
                 <div class="mobile-menu-header">
@@ -68,102 +71,167 @@
                         <i class="fa-solid fa-times"></i>
                     </button>
                 </div>
+
                 <nav class="mobile-nav">
                     <ul>
                         <li><a href="../index.html" class="mobile-nav-link">HOME</a></li>
                         <li><a href="../classes.html" class="mobile-nav-link">CLASSES</a></li>
                         <li><a href="../gallery.html" class="mobile-nav-link">GALLERY</a></li>
-                        <li><a href="../testimonial.html" class="mobile-nav-link">TESTIMONIAL</a></li>
+                        <li><a href="../testimonial.html" class="mobile-nav-link">TESTIMONIALS</a></li>
                         <li><a href="../about.html" class="mobile-nav-link">ABOUT</a></li>
-                        <li><a href="../contact.html" class="mobile-nav-link">CONTACT US</a></li>
+                        <li><a href="../contact.html" class="mobile-nav-link">CONTACT</a></li>
                     </ul>
                 </nav>
+
                 <div class="mobile-menu-footer">
                     <a href="../contact.html#contact-form" class="mobile-book-btn">BOOK CLASS</a>
                 </div>
             </div>
         </div>
 
-        <!-- Hero Section -->
-        <section class="dance-hero">
-            <h1>DANCE</h1>
-        </section>
+        <!-- ================= VIDEO HERO ================= -->
+        <section class="hero" style="grid-template-columns: 1fr; position: relative;">
 
-        <!-- About Dance Section -->
-        <section class="about-dance">
-            <h2>Expressive Movement</h2>
-            <p>Dance is a universal language that transcends words. It is an expression of the soul, a celebration of
-                life, and a powerful medium for healing. Through rhythm and movement, we release stagnant energy,
-                reconnect with our bodies, and find joy in the present moment.</p>
-            <p>Our dance offerings range from the grace of classical forms to the energy of modern choreography. Whether
-                you are preparing for a special event or seeking a therapeutic outlet, our sessions are designed to help
-                you move with confidence and freedom.</p>
-        </section>
+            <div class="hero-image" style="height:70vh; position:relative; border-radius:80px 80px 0 0;">
+                <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover;">
+                    <source src="../videos/dance.mp4" type="video/mp4">
+                </video>
 
-        <!-- Dance Services Section -->
-        <section class="dance-services-section">
-            <h2 class="section-title">Dance Services We Offer</h2>
+                <div style="
+                    position:absolute;
+                    inset:0;
+                    background:rgba(26,95,95,0.35);
+                "></div>
 
-            <div class="dance-services-grid">
-                <!-- Wedding Choreography -->
-                <div class="service-card">
-                    <h3>Wedding Choreography</h3>
-                    <p>Personalised and fun choreography for:</p>
-                    <ul>
-                        <li>Bride & Groom performances</li>
-                        <li>Family & Friends</li>
-                        <li>Sangeet, Mehendi, and Wedding events</li>
-                    </ul>
-                    <p style="margin-top: 15px;">Whether elegant, emotional, or energetic—we design performances that
-                        feel natural, confident, and unforgettable.</p>
-                </div>
-
-                <!-- Group Choreography -->
-                <div class="service-card">
-                    <h3>Group Choreography</h3>
-                    <p>Choreography for groups of all ages and skill levels, perfect for:</p>
-                    <ul>
-                        <li>Cultural events</li>
-                        <li>Stage performances</li>
-                        <li>Community gatherings</li>
-                        <li>School & college events</li>
-                    </ul>
-                </div>
-
-                <!-- Corporate Event Choreography -->
-                <div class="service-card">
-                    <h3>Corporate Event Choreography</h3>
-                    <p>High-energy, professional performances and interactive dance sessions for:</p>
-                    <ul>
-                        <li>Corporate celebrations</li>
-                        <li>Team-building events</li>
-                        <li>Annual days & offsites</li>
-                    </ul>
-                </div>
-
-                <!-- Classical & Fusion Dance Training -->
-                <div class="service-card">
-                    <h3>Classical & Fusion Dance Training</h3>
-                    <p>Training that blends classical foundation with modern expression, focusing on:</p>
-                    <ul>
-                        <li>Grace, posture, rhythm</li>
-                        <li>Expression and storytelling</li>
-                        <li>Technique and musicality</li>
-                    </ul>
-                </div>
-
-                <!-- Workshops & Special Projects -->
-                <div class="service-card" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto;">
-                    <h3>Workshops & Special Projects</h3>
-                    <p>Short-term dance workshops, themed sessions, and creative collaborations for institutions,
-                        organisations, and private groups.</p>
+                <div style="
+                    position:absolute;
+                    top:50%;
+                    left:50%;
+                    transform:translate(-50%, -50%);
+                    text-align:center;
+                    color:#fff;
+                    z-index:2;
+                ">
+                    <h1 style="
+                        font-family: var(--font-serif);
+                        font-size: clamp(2.5rem, 6vw, 15rem);
+                        font-weight:400;
+                        letter-spacing:3px;
+                    ">
+                        DANCE
+                    </h1>
+                    <p style="
+                        font-family: var(--font-sans);
+                        letter-spacing:3px;
+                        font-size:1rem;
+                        opacity:0.9;
+                    ">
+                        Rhythm • Expression • Freedom
+                    </p>
                 </div>
             </div>
+
         </section>
 
-        <!-- Formats Available Section -->
+        <!-- ================= ABOUT DANCE ================= -->
+        <section class="about-yoga">
+            <h2>About Dance</h2>
+            <p>
+                Dance is a universal language — a powerful expression of emotion, rhythm,
+                and storytelling through movement. It connects body, mind, and soul.
+            </p>
+            <p>
+                At Ashika Jain Yoga Studio, dance is approached as both an art form and a
+                therapeutic practice, helping you move with confidence, grace, and joy.
+            </p>
+        </section>
+
+        <!-- ================= DANCE SERVICES ================= -->
+        <section class="yoga-types-section">
+            <h2 class="section-title">Dance Services We Offer</h2>
+
+            <!-- Wedding -->
+            <div class="instructor">
+                <div class="instructor-image-wrapper">
+                    <img src="../videos/d1.png" class="instructor-img" alt="Wedding Choreography">
+                </div>
+                <div class="instructor-content">
+                    <h2>Wedding Choreography</h2>
+                    <span class="role">Personalised Performances</span>
+                    <p>
+                        Bespoke choreography for bride & groom, families, and friends.
+                        Perfect for sangeet, mehendi, and wedding celebrations —
+                        elegant, emotional, or energetic.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Group -->
+            <div class="instructor">
+                <div class="instructor-content">
+                    <h2>Group Choreography</h2>
+                    <span class="role">All Ages & Skill Levels</span>
+                    <p>
+                        Dynamic group routines designed for cultural events,
+                        stage performances, community gatherings, and school or college programs.
+                    </p>
+                </div>
+                <div class="instructor-image-wrapper">
+                    <img src="../videos/d2.png" class="instructor-img" alt="Group Choreography">
+                </div>
+            </div>
+
+            <!-- Corporate -->
+            <div class="instructor">
+                <div class="instructor-image-wrapper">
+                    <img src="../videos/d3.png" class="instructor-img" alt="Corporate Dance">
+                </div>
+                <div class="instructor-content">
+                    <h2>Corporate Event Choreography</h2>
+                    <span class="role">High-Energy & Interactive</span>
+                    <p>
+                        Professional performances and interactive dance sessions
+                        for corporate celebrations, team-building events,
+                        annual days, and offsites.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Classical -->
+            <div class="instructor">
+                <div class="instructor-content">
+                    <h2>Classical & Fusion Training</h2>
+                    <span class="role">Technique & Expression</span>
+                    <p>
+                        A balanced blend of classical foundation and modern expression,
+                        focusing on posture, rhythm, storytelling, musicality, and grace.
+                    </p>
+                </div>
+                <div class="instructor-image-wrapper">
+                    <img src="../videos/d4.png" class="instructor-img" alt="Classical Dance">
+                </div>
+            </div>
+
+            <!-- Workshops -->
+            <div class="instructor">
+                <div class="instructor-image-wrapper">
+                    <img src="../videos/d5.png" class="instructor-img" alt="Dance Workshops">
+                </div>
+                <div class="instructor-content">
+                    <h2>Workshops & Special Projects</h2>
+                    <span class="role">Short-Term & Creative</span>
+                    <p>
+                        Themed workshops and creative collaborations for institutions,
+                        organisations, and private groups.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================= FORMATS ================= -->
         <section class="formats-section">
-            <h2 class="section-title" style="margin-bottom: 40px;">Formats Available</h2>
+            <h2 class="section-title">Formats Available</h2>
             <div class="formats-list">
                 <div class="format-item">Individual Training</div>
                 <div class="format-item">Group Sessions</div>
@@ -173,7 +241,7 @@
         </section>
 
         <!-- Footer -->
-        <footer class="about-footer" role="contentinfo">
+        <footer class="about-footer">
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="logo-circle">AJ</div>
@@ -181,59 +249,39 @@
                 </div>
                 <div class="footer-section">
                     <h4>CONTACT</h4>
-                    <p>123 Wellness Street<br>Your City, ST 12345<br>contact@ashikajain.com</p>
+                    <p>contact@ashikajain.com</p>
                 </div>
                 <div class="footer-section">
                     <h4>HOURS</h4>
-                    <p>Monday - Friday: 6am - 9pm<br>Saturday - Sunday: 8am - 6pm</p>
+                    <p>Mon – Sun: 6am – 9pm</p>
                 </div>
             </div>
         </footer>
+
     </div>
 
+    <!-- Scripts -->
     <script>
-        // Mobile Menu Toggle Logic
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
-        const body = document.body;
+        const toggle = document.getElementById('mobile-menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('mobile-menu-close');
 
-        if (mobileMenuToggle) {
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.add('active');
-                body.classList.add('menu-open');
-            });
-        }
+        toggle.addEventListener('click', () => {
+            menu.classList.add('active');
+            document.body.classList.add('menu-open');
+        });
 
-        if (mobileMenuClose) {
-            mobileMenuClose.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                body.classList.remove('menu-open');
-            });
-        }
+        closeBtn.addEventListener('click', () => {
+            menu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
 
-        if (mobileMenu) {
-            mobileMenu.addEventListener('click', (e) => {
-                if (e.target === mobileMenu) {
-                    mobileMenu.classList.remove('active');
-                    body.classList.remove('menu-open');
-                }
-            });
-        }
-
-        // Preloader Logic
         window.addEventListener('load', () => {
             const preloader = document.getElementById('preloader');
-            if (preloader) {
-                setTimeout(() => {
-                    preloader.style.opacity = '0';
-                    setTimeout(() => {
-                        preloader.style.display = 'none';
-                    }, 500);
-                }, 1000);
-            }
+            preloader.style.opacity = '0';
+            setTimeout(() => preloader.style.display = 'none', 500);
         });
     </script>
-</body>
 
+</body>
 </html>
