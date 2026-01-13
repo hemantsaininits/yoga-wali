@@ -5,22 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Primary Meta Tags -->
     <title>EFT Tapping | Ashika Jain Yoga Studio</title>
     <meta name="description"
-        content="Find emotional freedom with EFT Tapping. Release stress, anxiety, and limiting beliefs through this powerful holistic healing technique.">
+        content="Emotional Freedom Technique (EFT) helps release stress, anxiety, emotional blocks, and limiting beliefs through gentle tapping.">
 
-    <!-- Fonts & Styles -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Main Styles -->
+    <!-- Global Styles -->
     <link rel="stylesheet" href="../style.css">
-    <!-- Page Specific Styles -->
+    <!-- Page Styles -->
     <link rel="stylesheet" href="eft.css">
 </head>
 
@@ -29,28 +30,31 @@
     <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="preloader-content">
-            <img src="../images/teal-logo.png" alt="Ashika Jain Yoga Studio Logo" class="preloader-logo">
+            <img src="../images/teal-logo.png" class="preloader-logo" alt="Logo">
         </div>
     </div>
 
     <div class="main-container">
+
         <!-- Header -->
-        <header role="banner">
+        <header>
             <div class="logo">
                 <a href="../index.html">
                     <div class="logo-circle">AJ</div>
                 </a>
             </div>
-            <nav role="navigation" aria-label="Main navigation">
+
+            <nav>
                 <ul>
                     <li><a href="../index.html">HOME</a></li>
                     <li><a href="../classes.html">CLASSES</a></li>
                     <li><a href="../gallery.html">GALLERY</a></li>
                     <li><a href="../testimonial.html">TESTIMONIALS</a></li>
                     <li><a href="../about.html">ABOUT</a></li>
-                    <li><a href="../contact.html">CONTACT US</a></li>
+                    <li><a href="../contact.html">CONTACT</a></li>
                 </ul>
             </nav>
+
             <div class="header-actions">
                 <a href="../contact.html#contact-form" class="book-btn">BOOK CLASS</a>
                 <div class="menu-icon" id="mobile-menu-toggle">
@@ -59,7 +63,7 @@
             </div>
         </header>
 
-        <!-- Mobile Menu Overlay -->
+        <!-- Mobile Menu -->
         <div class="mobile-menu-overlay" id="mobile-menu">
             <div class="mobile-menu-content">
                 <div class="mobile-menu-header">
@@ -68,92 +72,160 @@
                         <i class="fa-solid fa-times"></i>
                     </button>
                 </div>
+
                 <nav class="mobile-nav">
                     <ul>
                         <li><a href="../index.html" class="mobile-nav-link">HOME</a></li>
                         <li><a href="../classes.html" class="mobile-nav-link">CLASSES</a></li>
                         <li><a href="../gallery.html" class="mobile-nav-link">GALLERY</a></li>
-                        <li><a href="../testimonial.html" class="mobile-nav-link">TESTIMONIAL</a></li>
+                        <li><a href="../testimonial.html" class="mobile-nav-link">TESTIMONIALS</a></li>
                         <li><a href="../about.html" class="mobile-nav-link">ABOUT</a></li>
-                        <li><a href="../contact.html" class="mobile-nav-link">CONTACT US</a></li>
+                        <li><a href="../contact.html" class="mobile-nav-link">CONTACT</a></li>
                     </ul>
                 </nav>
+
                 <div class="mobile-menu-footer">
                     <a href="../contact.html#contact-form" class="mobile-book-btn">BOOK CLASS</a>
                 </div>
             </div>
         </div>
 
-        <!-- Hero Section -->
-        <section class="eft-hero">
-            <h1>EFT TAPPING</h1>
-        </section>
+        <!-- ================= HERO ================= -->
+        <section class="hero" style="grid-template-columns:1fr;">
 
-        <!-- About EFT Section -->
-        <section class="about-eft">
-            <h2>Emotional Freedom</h2>
-            <p>Emotional Freedom Techniques (EFT), often referred to as 'Tapping', is a holistic healing method that
-                combines ancient Chinese acupressure with modern psychology. By tapping on specific meridian points
-                while focusing on a negative emotion or physical issue, you can release energy blockages and restore
-                balance to your body's energy system.</p>
-            <p>EFT is a simple yet powerful tool that empowers you to manage stress, overcome emotional hurdles, and
-                unlock your full potential. It bridges the gap between the mind and body, allowing for profound healing
-                and transformation.</p>
-        </section>
+            <div class="hero-image" style="height:70vh; position:relative; border-radius:80px 80px 0 0;">
+                <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover;">
+                    <source src="../videos/eft.mp4" type="video/mp4">
+                </video>
 
-        <!-- EFT Services/Applications Section -->
-        <section class="eft-services-section">
-            <h2 class="section-title">How EFT Can Help</h2>
+                <div style="position:absolute; inset:0; background:rgba(26,95,95,0.35);"></div>
 
-            <div class="eft-services-grid">
-                <!-- Stress & Anxiety Relief -->
-                <div class="service-card">
-                    <h3>Stress & Anxiety Relief</h3>
-                    <p>Release chronic stress, calm the nervous system, and find relief from anxiety and panic attacks.
-                        Tapping sends a calming signal to the brain, reducing cortisol levels instantly.</p>
-                </div>
-
-                <!-- Emotional Healing -->
-                <div class="service-card">
-                    <h3>Emotional Healing</h3>
-                    <p>Process and release past traumas, grief, anger, and other difficult emotions in a safe and gentle
-                        way. Free yourself from the emotional weight of the past.</p>
-                </div>
-
-                <!-- Pain Management -->
-                <div class="service-card">
-                    <h3>Pain Management</h3>
-                    <p>Address the emotional roots of physical pain and find relief from chronic conditions and tension.
-                        Often, physical pain is a manifestation of unresolved emotional stress.</p>
-                </div>
-
-                <!-- Limiting Beliefs -->
-                <div class="service-card">
-                    <h3>Limiting Beliefs</h3>
-                    <p>Identify and clear subconscious blocks that are holding you back from achieving your goals.
-                        Rewire your brain for confidence, success, and abundance.</p>
+                <div style="
+                    position:absolute;
+                    top:50%;
+                    left:50%;
+                    transform:translate(-50%, -50%);
+                    text-align:center;
+                    color:#fff;
+                ">
+                    <h1 style="
+                        font-family:var(--font-serif);
+                        font-size:clamp(2.5rem,6vw,14rem);
+                        font-weight:400;
+                        letter-spacing:3px;
+                    ">
+                        EFT TAPPING
+                    </h1>
+                    <p style="
+                        font-family:var(--font-sans);
+                        letter-spacing:3px;
+                        font-size:1rem;
+                        opacity:0.9;
+                    ">
+                        Emotional • Balance • Release
+                    </p>
                 </div>
             </div>
+
         </section>
 
-        <!-- Tapping Points Section -->
-        <section class="tapping-points-section">
-            <h2 class="section-title" style="margin-bottom: 40px;">The Tapping Points</h2>
-            <div class="tapping-points-list">
-                <div class="point-item">Karate Chop (Side of Hand)</div>
-                <div class="point-item">Eyebrow</div>
-                <div class="point-item">Side of Eye</div>
-                <div class="point-item">Under Eye</div>
-                <div class="point-item">Under Nose</div>
-                <div class="point-item">Chin</div>
-                <div class="point-item">Collarbone</div>
-                <div class="point-item">Under Arm</div>
-                <div class="point-item">Top of Head</div>
+        <!-- ================= ABOUT EFT ================= -->
+        <section class="about-yoga">
+            <h2>Emotional Freedom</h2>
+            <p>
+                Emotional Freedom Technique (EFT), also known as Tapping,
+                is a gentle yet powerful healing modality that combines
+                acupressure with modern psychology.
+            </p>
+            <p>
+                By tapping on specific meridian points while focusing on
+                emotional or physical challenges, the nervous system
+                relaxes, allowing stress, trauma, and limiting beliefs
+                to release naturally.
+            </p>
+        </section>
+
+        <!-- ================= EFT APPLICATIONS ================= -->
+        <section class="yoga-types-section">
+            <h2 class="section-title">How EFT Can Support You</h2>
+
+            <div class="instructor">
+                <div class="instructor-image-wrapper">
+                    <img src="../videos/e1.png" class="instructor-img" alt="Stress Relief EFT">
+                </div>
+                <div class="instructor-content">
+                    <h2>Stress & Anxiety Relief</h2>
+                    <span class="role">Calm the Nervous System</span>
+                    <p>
+                        EFT helps reduce anxiety, overwhelm, and panic by
+                        signaling safety to the brain and lowering cortisol levels.
+                    </p>
+                </div>
+            </div>
+
+            <div class="instructor">
+                <div class="instructor-content">
+                    <h2>Emotional Healing</h2>
+                    <span class="role">Release the Past</span>
+                    <p>
+                        Gently process trauma, grief, anger, and unresolved
+                        emotional experiences without reliving the pain.
+                    </p>
+                </div>
+                <div class="instructor-image-wrapper">
+                    <img src="../videos/e2.png" class="instructor-img" alt="Emotional Healing EFT">
+                </div>
+            </div>
+
+            <div class="instructor">
+                <div class="instructor-image-wrapper">
+                    <img src="../videos/e3.png" class="instructor-img" alt="Pain Relief EFT">
+                </div>
+                <div class="instructor-content">
+                    <h2>Physical Pain Support</h2>
+                    <span class="role">Mind–Body Connection</span>
+                    <p>
+                        Address emotional contributors behind chronic pain,
+                        tension, and discomfort to support physical healing.
+                    </p>
+                </div>
+            </div>
+
+            <div class="instructor">
+                <div class="instructor-content">
+                    <h2>Clearing Limiting Beliefs</h2>
+                    <span class="role">Inner Empowerment</span>
+                    <p>
+                        Release subconscious blocks related to confidence,
+                        self-worth, success, and abundance.
+                    </p>
+                </div>
+                <div class="instructor-image-wrapper">
+                    <img src="../videos/e4.png" class="instructor-img" alt="Limiting Beliefs EFT">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================= TAPPING POINTS ================= -->
+        <section class="formats-section">
+            <h2 class="section-title">Common Tapping Points</h2>
+
+            <div class="formats-list">
+                <div class="format-item">Karate Chop</div>
+                <div class="format-item">Eyebrow</div>
+                <div class="format-item">Side of Eye</div>
+                <div class="format-item">Under Eye</div>
+                <div class="format-item">Under Nose</div>
+                <div class="format-item">Chin</div>
+                <div class="format-item">Collarbone</div>
+                <div class="format-item">Under Arm</div>
+                <div class="format-item">Top of Head</div>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="about-footer" role="contentinfo">
+        <footer class="about-footer">
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="logo-circle">AJ</div>
@@ -161,59 +233,39 @@
                 </div>
                 <div class="footer-section">
                     <h4>CONTACT</h4>
-                    <p>123 Wellness Street<br>Your City, ST 12345<br>contact@ashikajain.com</p>
+                    <p>contact@ashikajain.com</p>
                 </div>
                 <div class="footer-section">
                     <h4>HOURS</h4>
-                    <p>Monday - Friday: 6am - 9pm<br>Saturday - Sunday: 8am - 6pm</p>
+                    <p>Mon – Sun: 6am – 9pm</p>
                 </div>
             </div>
         </footer>
+
     </div>
 
+    <!-- Scripts -->
     <script>
-        // Mobile Menu Toggle Logic
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
-        const body = document.body;
+        const toggle = document.getElementById('mobile-menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('mobile-menu-close');
 
-        if (mobileMenuToggle) {
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.add('active');
-                body.classList.add('menu-open');
-            });
-        }
+        toggle.addEventListener('click', () => {
+            menu.classList.add('active');
+            document.body.classList.add('menu-open');
+        });
 
-        if (mobileMenuClose) {
-            mobileMenuClose.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                body.classList.remove('menu-open');
-            });
-        }
+        closeBtn.addEventListener('click', () => {
+            menu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
 
-        if (mobileMenu) {
-            mobileMenu.addEventListener('click', (e) => {
-                if (e.target === mobileMenu) {
-                    mobileMenu.classList.remove('active');
-                    body.classList.remove('menu-open');
-                }
-            });
-        }
-
-        // Preloader Logic
         window.addEventListener('load', () => {
             const preloader = document.getElementById('preloader');
-            if (preloader) {
-                setTimeout(() => {
-                    preloader.style.opacity = '0';
-                    setTimeout(() => {
-                        preloader.style.display = 'none';
-                    }, 500);
-                }, 1000);
-            }
+            preloader.style.opacity = '0';
+            setTimeout(() => preloader.style.display = 'none', 500);
         });
     </script>
-</body>
 
+</body>
 </html>
