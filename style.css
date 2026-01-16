@@ -64,6 +64,7 @@ body.preloader-active {
         opacity: 0;
         transform: scale(0.8);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -123,7 +124,8 @@ header {
     background: url('images/teal-logo.png') center/cover no-repeat;
     display: inline-block;
     overflow: hidden;
-    text-indent: -9999px; /* hide any fallback text */
+    text-indent: -9999px;
+    /* hide any fallback text */
 }
 
 nav ul {
@@ -163,7 +165,8 @@ nav a:hover {
 .menu-icon {
     font-size: 1.2rem;
     cursor: pointer;
-    display: none; /* Hidden on desktop, shown on mobile */
+    display: none;
+    /* Hidden on desktop, shown on mobile */
 }
 
 /* Mobile Menu Overlay - Hidden on desktop */
@@ -388,14 +391,14 @@ nav a:hover {
 
 .nav-btn:hover {
     color: var(--primary-text);
-    box-shadow: 
+    box-shadow:
         4px 4px 8px rgba(0, 0, 0, 0.1),
         -4px -4px 8px rgba(255, 255, 255, 0.9);
     transform: scale(0.95);
 }
 
 .nav-btn:active {
-    box-shadow: 
+    box-shadow:
         inset 4px 4px 8px rgba(0, 0, 0, 0.1),
         inset -4px -4px 8px rgba(255, 255, 255, 0.9);
     transform: scale(0.92);
@@ -444,6 +447,14 @@ nav a:hover {
     color: #7fb3b5;
     margin-bottom: 15px;
     transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
 }
 
 .feature-item:hover .icon {
@@ -655,10 +666,14 @@ nav a:hover {
 }
 
 .category-item .icon {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: #7fb3b5;
     margin-bottom: 15px;
     transition: color 0.3s ease, transform 0.3s ease;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .category-item:hover .icon {
@@ -1121,7 +1136,8 @@ footer {
         padding: 20px 0;
         margin-bottom: 40px;
     }
-    .hero-slide{
+
+    .hero-slide {
         top: 0;
     }
 

@@ -41,7 +41,7 @@
     max-width: 600px;
 }
 
-.floral-decoration-left{
+.floral-decoration-left {
     position: absolute;
     top: 200px;
     left: -80px;
@@ -244,6 +244,12 @@
     color: #aebcb3;
     margin-bottom: 20px;
     transition: all 0.4s ease;
+}
+
+.value-icon img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
 }
 
 .value-card:hover .value-icon {

@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Meta Tags -->
     <title>Gallery | Ashika Jain Yoga Studio</title>
     <meta name="title" content="Gallery | Ashika Jain Yoga Studio">
-    <meta name="description" content="Explore our gallery showcasing moments from Ashtanga Yoga, Dance Therapy, EFT Tapping, and Sound Healing sessions.">
-    
+    <meta name="description"
+        content="Explore our gallery showcasing moments from Ashtanga Yoga, Dance Therapy, EFT Tapping, and Sound Healing sessions.">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/teal-logo.png">
-    
+
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,19 +83,19 @@
                 <h3>ALL</h3>
             </div>
             <div class="category-item" data-category="yoga">
-                <div class="icon"><i class="fa-solid fa-spa"></i></div>
+                <div class="icon"><img src="images/yoga.PNG" alt="Yoga Icon" class="feature-icon"></div>
                 <h3>YOGA</h3>
             </div>
             <div class="category-item" data-category="dance">
-                <div class="icon"><i class="fa-solid fa-infinity"></i></div>
+                <div class="icon"><img src="images/dance.PNG" alt="Dance Icon" class="feature-icon"></div>
                 <h3>DANCE</h3>
             </div>
             <div class="category-item" data-category="eft">
-                <div class="icon"><i class="fa-solid fa-om"></i></div>
+                <div class="icon"><img src="images/eft.PNG" alt="EFT Icon" class="feature-icon"></div>
                 <h3>EFT (TAPPING)</h3>
             </div>
             <div class="category-item" data-category="sound">
-                <div class="icon"><i class="fa-solid fa-leaf"></i></div>
+                <div class="icon"><img src="images/sound.PNG" alt="Sound Icon" class="feature-icon"></div>
                 <h3>SOUND HEALING</h3>
             </div>
         </section>
@@ -103,7 +104,8 @@
         <section class="gallery-intro">
             <div class="gallery-intro-content">
                 <h2 class="gallery-intro-heading">OUR GALLERY</h2>
-                <p class="gallery-intro-text">Explore moments of tranquility, strength, and connection captured in our practice space.</p>
+                <p class="gallery-intro-text">Explore moments of tranquility, strength, and connection captured in our
+                    practice space.</p>
             </div>
         </section>
 
@@ -284,7 +286,7 @@
         function autoFilterFromURL() {
             const urlParams = new URLSearchParams(window.location.search);
             const filter = urlParams.get('filter');
-            
+
             if (filter) {
                 // Find the category item that matches the filter
                 categoryItems.forEach(item => {
@@ -294,7 +296,7 @@
                         categoryItems.forEach(cat => cat.classList.remove('active'));
                         // Add active class to matching category
                         item.classList.add('active');
-                        
+
                         // Trigger the filter
                         const categoryAttr = item.getAttribute('data-category');
                         bentoItems.forEach(bentoItem => {
@@ -324,4 +326,3 @@
 </body>
 
 </html>
-
